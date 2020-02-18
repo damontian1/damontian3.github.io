@@ -53,7 +53,7 @@
     "title": "Serenity - Clothing Store startup built with WordPress",
     "slogan": "Serenity - Shop Men's and Women's Clothing",
     "objective": "I wanted to create my own ecommerce website with an elegant brand design that looks and feels like a real clothing company. I wanted to create a professional and pixel-perfect user interface and I accomplished this through advanced editing of a WordPress theme. I wanted to enhance SEO visibility by optimizing all of the website's meta-keywords and promoting social media sharing. Images \u0026 content are credited to Unsplash.com and Everlane.com.",
-    "website": "https://www.damontian.com/wordpress-serenity",
+    "website": "https://damontian1.github.io/wordpress-serenity",
     "desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fserenity.jpg?alt=media&token=48f615a2-c82c-4c21-82f2-8e41d144d6cc",
     "mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Fserenity-mobile2.jpg?alt=media&token=3284dc29-ad43-4152-a6c9-29241e94f87a",
     "github": "https://github.com/damontian1/wordpress-serenity",
@@ -74,7 +74,7 @@
     "slogan": "YouTube Top Media - Find trending music and movies on YouTube",
     "objective": "I wanted to create a seamless Single-page application where users can quickly stay up to date with current popular music and movies all on one page. I wanted users to be able to easily select, search, and watch their content without the page ever reloading.",
     "desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Ftop-media.jpg?alt=media&token=2073ae73-413d-411d-958e-27fe1fee4613",
-    "website": "http://www.damontian.com/react-youtube-top-media",
+    "website": "https://damontian1.github.io/react-youtube-top-media",
     "mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Ftop-media-mobile.jpg?alt=media&token=d127599e-0040-440e-8d39-bf6e261b81ec",
     "github": "https://github.com/damontian1/react-youtube-top-media",
     "stack": [
@@ -95,7 +95,7 @@
     "slogan": "Contacts Dashboard - Your personalized address book dashboard",
     "objective": "I wanted to create a fast Single-page application that allows users to add, edit, delete, and search contacts from a database, without having to reload the page.",
     "desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fcontacts-dashboard.jpg?alt=media&token=6c9d5f53-aa01-45dc-a7dd-db1929dc7bf1",
-    "website": "http://www.damontian.com/react-contacts-dashboard",
+    "website": "https://damontian1.github.io/react-contacts-dashboard",
     "mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Fcontacts-dashboard-mobile.jpg?alt=media&token=a0843297-8bbe-481e-a5ee-27b25a87181f",
     "github": "https://github.com/damontian1/react-contacts-dashboard",
     "stack": [
