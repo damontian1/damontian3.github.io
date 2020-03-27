@@ -1,47 +1,54 @@
-import React from "react";
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
-class Navigation extends React.Component {
-  render() {
-    return (
-      <section id="navigation">
-        <nav className="navbar navbar-default navbar-fixed-top" style={{ padding: "0em 0em" }}>
-          <div className="container-fluid navigation-style">
-            <div className="navigation-style__inner">
-
-              <div>
-                <div className="navbar-header">
-                  <a href="/">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/logo%2Flogo.png?alt=media&token=2ed2e538-9dc4-4bf9-bd19-c2a0e81a34ad" />
-                  </a>
-                </div>
-              </div>
-
-              <div>
-                <div className="navbar-social-media">
-                  <a href="#banner"><span>ABOUT</span></a>
-                  <a href="#work-gallery"><span>PROJECTS</span></a>
-                  <a href="mailto:damontian@live.com"><span>CONTACT</span></a>
-                  <span className="hidden-xs hidden-sm">
-                    <span style={{ paddingRight: "0.8em" }}>|</span>
-                    <a href="https://www.linkedin.com/in/damontian1" target="_blank" rel="noopener noreferrer">
-                      <i className="fab fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://github.com/damontian1" target="_blank">
-                      <i className="fab fa-github" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://codepen.io/damontian1/pens/loved" target="_blank">
-                      <i className="fab fa-codepen" aria-hidden="true"></i>
-                    </a>
-                  </span>
-                </div>
-              </div>
-
+const Navigation = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "logo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 230) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+      codepen: file(relativePath: {eq: "codepen.svg"}) {
+        publicURL
+      }
+      github: file(relativePath: {eq: "github.svg"}) {
+        publicURL
+      }
+      linkedin: file(relativePath: {eq: "linkedin.svg"}) {
+        publicURL
+      }
+    }
+  `)
+  return (
+    <section id="navigation" className="fixed left-0 right-0">
+      <nav className="border border-t-0">
+        <div className="container mx-auto my-5">
+          <div className="flex items-center justify-center sm:justify-between">
+            <div className="w-40">
+              <a href="/">
+                <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+              </a>
+            </div>
+            <div className="font-bold hidden sm:flex items-center">
+              <a href="https://www.linkedin.com/in/damontian1" className="pr-5">
+                <img src={data.linkedin.publicURL} alt="" className="w-5" />
+              </a>
+              <a href="https://github.com/damontian1" className="pr-5">
+                <img src={data.github.publicURL} alt="" className="w-5" />
+              </a>
+              <a href="https://codepen.io/damontian1/pens/loved">
+                <img src={data.codepen.publicURL} alt="" className="w-5" />
+              </a>
             </div>
           </div>
-        </nav>
-      </section>
-    );
-  }
+        </div>
+      </nav>
+    </section >
+  )
 }
 
-export default Navigation;
+export default Navigation

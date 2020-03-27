@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Sarala:400,700&display=swap");
+@tailwind base;
+@tailwind components;
+.btn {
+  @apply border mr-4 px-4 px-6 py-2 rounded inline-block;
+}
+.btn:hover {
+  @apply bg-gray-300 shadow-lg;
+}
+.card:hover {
+  @apply opacity-50 cursor-pointer ease-in-out;
+}
+.container {
+  @apply max-w-5xl px-6;
+}
+body {
+  font-family: Sarala, Arial, Helvetica, sans-serif;
+  section#navigation {
+    background: rgba(255, 255, 255, 0.9);
+  }
+  main {
+    margin-top: 73px;
+  }
+}
+@tailwind utilities;
