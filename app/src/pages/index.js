@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Banner from "../components/banner"
-import ProjectGallery from "../components/project-gallery"
+import ProjectGallery from "../components/ProjectGallery"
 
 const IndexPage = () => (
   <Layout>

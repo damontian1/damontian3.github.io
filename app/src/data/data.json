@@ -1,6 +1,6 @@
 [
   {
-    "tag": "Main",
+    "tag": "pets.png",
     "id": "1",
     "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fsave-the-world-banner.png?alt=media&token=97ef2cc6-3e8f-49dd-8a55-83b23aac611c",
     "title": "Save the World - Pet Adoption Site built with Laravel",
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "tag": "Main",
+    "tag": "truckly.png",
     "id": "2",
     "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Ftruckly-banner.png?alt=media&token=a2d91687-6f4b-4f2c-a862-2a4234498df2",
     "title": "Truckly - Food Truck Delivery built with Laravel",
@@ -47,7 +47,7 @@
     ]
   },
   {
-    "tag": "Main",
+    "tag": "serenity.png",
     "id": "3",
     "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fserenity.jpg?alt=media&token=5c26d376-2920-47f9-989d-e0ff42f60814",
     "title": "Serenity - Clothing Store startup built with WordPress",
@@ -57,10 +57,17 @@
     "desktop": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/desktop%2Fserenity.jpg?alt=media&token=48f615a2-c82c-4c21-82f2-8e41d144d6cc",
     "mobile": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/mobile%2Fserenity-mobile2.jpg?alt=media&token=3284dc29-ad43-4152-a6c9-29241e94f87a",
     "github": "https://github.com/damontian1/wordpress-serenity",
-    "stack": ["WordPress", "CSS/SCSS", "JavaScript", "Sketch", "MySQL", "Git"]
+    "stack": [
+      "WordPress",
+      "CSS/SCSS",
+      "JavaScript",
+      "Sketch",
+      "MySQL",
+      "Git"
+    ]
   },
   {
-    "tag": "Main",
+    "tag": "media.png",
     "id": "4",
     "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fyoutube-top-media-banner.jpg?alt=media&token=7e51e1da-b252-4628-880d-8b9b0e641f90",
     "title": "YouTube Top Media - Single Page Top Media Search built with React.JS",
@@ -81,7 +88,7 @@
     ]
   },
   {
-    "tag": "Main",
+    "tag": "contacts.png",
     "id": "5",
     "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fcontacts-dashboard-banner.jpg?alt=media&token=07a1676e-bd3f-41ad-bb04-1ed312467d6a",
     "title": "Contacts Dashboard - Single Page Address Book Manager built with React.JS",
@@ -103,7 +110,7 @@
     ]
   },
   {
-    "tag": "Main",
+    "tag": "extra.png",
     "id": "6",
     "art": "https://firebasestorage.googleapis.com/v0/b/damontian-v2-images.appspot.com/o/art%2Fcodepen2.png?alt=media&token=8bc70cda-9ecc-4395-b760-0c39e78db77e",
     "title": "CodePen - Addtional Projects",

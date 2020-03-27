@@ -5,15 +5,15 @@ const Footer = () => {
     <section id="footer" className="bg-gray-100">
       <footer className="container mx-auto py-16">
         <div className="flex justify-evenly">
-          <div className="text-gray-800 hidden sm:block">
+          <div className="text-gray-800">
             <p className="pb-5 text-black uppercase text-sm">
               <strong>Site Info</strong>
             </p>
-            <p>© 2019 | By Damon Tian</p>
+            <p>© 2020 | Damon Tian</p>
             <p>Built with: Gatsby.js</p>
             <p>Tailwind, React.js</p>
           </div>
-          <div className="text-gray-800">
+          <div className="text-gray-800 hidden sm:block">
             <p className="pb-5 text-black uppercase text-sm">
               <strong>Contact Info</strong>
             </p>

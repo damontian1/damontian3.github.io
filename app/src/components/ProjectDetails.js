@@ -18,12 +18,26 @@ const ProjectDetails = props => {
             objective
             art
             id
+            tag
+          }
+        }
+      }
+      images: allFile(filter: {extension: {eq: "png"}}) {
+        edges {
+          node {
+            childImageSharp {
+              fluid {
+                src
+                originalName
+              }
+            }
           }
         }
       }
     }
   `)
-  if (props.location.state && props.location.state.active) {
+  const dataExists = data.allDataJson.edges.map(item => item.node.id).indexOf(props.id) !== -1;
+  if (dataExists) {
     return (
       <Layout>
         <SEO title="Project Description" />
@@ -31,38 +45,41 @@ const ProjectDetails = props => {
           <div>
             {data.allDataJson.edges
               .filter(item => item.node.id === props.id)
-              .map(item => (
-                <div className="max-w-screen-sm" key={item.node.id}>
-                  <h2 className="font-bold leading-tight text-3xl sm:text-4xl">
-                    {item.node.title}
-                  </h2>
-                  <img className="max-w-sm w-full my-8 rounded" alt="" src={item.node.art} />
-                  <div className="mb-6">
-                    <span className="uppercase font-bold">Objective</span>
-                    <p>{item.node.objective}</p>
-                  </div>
-                  <div className="mb-6">
-                    <div>
-                      <span className="uppercase font-bold">Website</span>
+              .map(item => {
+                let matched = data.images.edges.filter(elem => elem.node.childImageSharp.fluid.originalName == item.node.tag).map(elem => elem.node.childImageSharp.fluid.src);
+                return (
+                  <div className="max-w-screen-sm" key={item.node.id}>
+                    <h2 className="font-bold leading-tight text-3xl sm:text-4xl">
+                      {item.node.title}
+                    </h2>
+                    <img className="max-w-sm w-full my-8 rounded" alt="" src={matched[0]} />
+                    <div className="mb-6">
+                      <span className="uppercase font-bold">Objective</span>
+                      <p>{item.node.objective}</p>
                     </div>
-                    <a href={item.node.website} className="underline">{item.node.website}</a>
-                  </div>
-                  <div className="mb-6">
-                    <div>
-                      <span className="uppercase font-bold">Github</span>
+                    <div className="mb-6">
+                      <div>
+                        <span className="uppercase font-bold">Website</span>
+                      </div>
+                      <a href={item.node.website} className="underline">{item.node.website}</a>
                     </div>
-                    <a href={item.node.github} className="underline">{item.node.github}</a>
-                  </div>
-                  <div>
-                    <div>
-                      <span className="uppercase font-bold">Tech Stack</span>
+                    <div className="mb-6">
+                      <div>
+                        <span className="uppercase font-bold">Github</span>
+                      </div>
+                      <a href={item.node.github} className="underline">{item.node.github}</a>
                     </div>
-                    {item.node.stack.map((item, i) => (
-                      <span key={i} className="inline-block bg-gray-200 mr-1 mb-2 px-2 py-1">{item}</span>
-                    ))}
+                    <div>
+                      <div>
+                        <span className="uppercase font-bold">Tech Stack</span>
+                      </div>
+                      {item.node.stack.map((item, i) => (
+                        <span key={i} className="inline-block bg-gray-200 mr-1 mb-2 px-2 py-1">{item}</span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
           </div>
         </section>
       </Layout>

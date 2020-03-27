@@ -2,7 +2,12 @@
 @tailwind base;
 @tailwind components;
 .btn {
-  @apply border mr-4 px-4 px-6 py-2 rounded inline-block;
+  @apply border mr-4 px-2 py-2 rounded inline-block text-sm;
+}
+@screen sm {
+  .btn {
+    @apply px-4 text-base;
+  }
 }
 .btn:hover {
   @apply bg-gray-300 shadow-lg;
