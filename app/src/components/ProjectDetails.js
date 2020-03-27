@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "./layout"
 import SEO from "./seo"
 import Error from "../pages/404"
+import Img from "gatsby-image"
 
 const ProjectDetails = props => {
   const data = useStaticQuery(graphql`
@@ -26,8 +27,8 @@ const ProjectDetails = props => {
         edges {
           node {
             childImageSharp {
-              fluid {
-                src
+              fluid(maxWidth: 500, quality: 100) {
+                ...GatsbyImageSharpFluid
                 originalName
               }
             }
@@ -46,13 +47,14 @@ const ProjectDetails = props => {
             {data.allDataJson.edges
               .filter(item => item.node.id === props.id)
               .map(item => {
-                let matched = data.images.edges.filter(elem => elem.node.childImageSharp.fluid.originalName == item.node.tag).map(elem => elem.node.childImageSharp.fluid.src);
+                let matched = data.images.edges.filter(elem => elem.node.childImageSharp.fluid.originalName === item.node.tag).map(elem => elem.node.childImageSharp.fluid);
                 return (
                   <div className="max-w-screen-sm" key={item.node.id}>
                     <h2 className="font-bold leading-tight text-3xl sm:text-4xl">
                       {item.node.title}
                     </h2>
-                    <img className="max-w-sm w-full my-8 rounded" alt="" src={matched[0]} />
+                    {/* <img className="max-w-sm w-full my-8 rounded" alt="" src={matched[0]} /> */}
+                    <Img className="max-w-sm w-full my-8 rounded" alt="" fluid={matched[0]} />
                     <div className="mb-6">
                       <span className="uppercase font-bold">Objective</span>
                       <p>{item.node.objective}</p>
