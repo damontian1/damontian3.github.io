@@ -25,7 +25,7 @@ const Navigation = () => {
   `)
   return (
     <section id="navigation" className="fixed left-0 right-0">
-      <nav className="border border-t-0">
+      <nav className="border border-l-0 border-right-0 border-t-0">
         <div className="container mx-auto my-5">
           <div className="flex items-center justify-center sm:justify-between">
             <div className="w-40">
