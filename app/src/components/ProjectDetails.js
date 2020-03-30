@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 
 const ProjectDetails = props => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       allDataJson {
         edges {
           node {
@@ -15,21 +15,13 @@ const ProjectDetails = props => {
             website
             title
             stack
-            slogan
             objective
-            art
             id
-            tag
-          }
-        }
-      }
-      images: allFile(filter: {extension: {eq: "png"}}) {
-        edges {
-          node {
-            childImageSharp {
-              fluid(maxWidth: 500, quality: 100) {
-                ...GatsbyImageSharpFluid
-                originalName
+            url {
+              childImageSharp {
+                fluid(maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }
@@ -37,24 +29,23 @@ const ProjectDetails = props => {
       }
     }
   `)
-  const dataExists = data.allDataJson.edges.map(item => item.node.id).indexOf(props.id) !== -1;
-  if (dataExists) {
+
+  const dataMatch = data.allDataJson.edges.filter(item => item.node.id === props.id);
+
+  if (dataMatch) {
     return (
       <Layout>
         <SEO title="Project Description" />
         <section id="project-description" className="py-12">
           <div>
-            {data.allDataJson.edges
-              .filter(item => item.node.id === props.id)
+            {dataMatch
               .map(item => {
-                let matched = data.images.edges.filter(elem => elem.node.childImageSharp.fluid.originalName === item.node.tag).map(elem => elem.node.childImageSharp.fluid);
                 return (
                   <div className="max-w-screen-sm" key={item.node.id}>
                     <h2 className="font-bold leading-tight text-3xl sm:text-4xl">
                       {item.node.title}
                     </h2>
-                    {/* <img className="max-w-sm w-full my-8 rounded" alt="" src={matched[0]} /> */}
-                    <Img className="max-w-sm w-full my-8 rounded" alt="" fluid={matched[0]} />
+                    <Img className="max-w-sm w-full my-8 rounded" alt="" fluid={item.node.url.childImageSharp.fluid} />
                     <div className="mb-6">
                       <span className="uppercase font-bold">Objective</span>
                       <p>{item.node.objective}</p>

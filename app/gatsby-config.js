@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `DAMON TIAN Portfolio Website`,
+    title: `Portfolio | DAMON TIAN`,
     description: `Here is version 3 of my portfolio website built on GatsbyJS and ReactJS`,
     author: `Damon Tian`,
   },

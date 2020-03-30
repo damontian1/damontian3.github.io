@@ -1,8 +1,8 @@
 var plugins = [{
-      plugin: require('/Users/Damon/Projects/damontian1.github.io/app/node_modules/gatsby-plugin-react-helmet-async/gatsby-ssr'),
+      plugin: require('/Users/Damon/Desktop/damontian1.github.io/app/node_modules/gatsby-plugin-react-helmet-async/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/Damon/Projects/damontian1.github.io/app/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      plugin: require('/Users/Damon/Desktop/damontian1.github.io/app/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/favicon.svg"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
